@@ -1,0 +1,30 @@
+[api-updater (non-obsolete-error-filter)] 2021/11/7 下午 02:36:32 : Starting C:/Users/A/2021_workspace/unity_space/2020.3.19f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 1771.5644ms
+moved types parse time: 81ms
+candidates parse time : 1ms
+C# parse time         : 346ms
+candidates check time : 51ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/11/9 下午 09:07:07 : Starting C:/Users/A/2021_workspace/unity_space/2020.3.19f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 264.2806ms
+moved types parse time: 81ms
+candidates parse time : 1ms
+C# parse time         : 323ms
+candidates check time : 39ms
+console write time    : 1ms
+
+[api-updater (non-obsolete-error-filter)] 2021/11/22 下午 01:41:01 : Starting C:/Users/A/2021_workspace/unity_space/2020.3.19f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 1734.5561ms
+moved types parse time: 75ms
+candidates parse time : 1ms
+C# parse time         : 310ms
+candidates check time : 51ms
+console write time    : 0ms
+

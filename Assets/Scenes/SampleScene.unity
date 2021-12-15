@@ -2906,11 +2906,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 880568568}
-  player: {fileID: 1848177026}
+  player: {fileID: 806394632}
   pickUpRange: 4
   turn: {x: 0, y: 0}
   sensitivity: 2
-  me: {fileID: 1848177020}
+  me: {fileID: 806394628}
 --- !u!54 &880568568
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2961,11 +2961,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 882460126}
-  player: {fileID: 1848177026}
+  player: {fileID: 806394632}
   pickUpRange: 5
   turn: {x: 0, y: 0}
   sensitivity: 2
-  me: {fileID: 1848177020}
+  me: {fileID: 806394628}
 --- !u!1 &917618685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1054516531068854, guid: 52e174db68e69754b9b080b25a308977, type: 3}
@@ -6902,11 +6902,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2061935828}
-  player: {fileID: 1848177026}
+  player: {fileID: 806394632}
   pickUpRange: 4
   turn: {x: 0, y: 0}
   sensitivity: 2
-  me: {fileID: 1848177020}
+  me: {fileID: 806394628}
 --- !u!1001 &2068297144
 PrefabInstance:
   m_ObjectHideFlags: 0

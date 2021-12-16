@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class racket : MonoBehaviour
 {
+
+    public GameObject panel;
+    public Transform player;
+    //public float distStandard;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "destination")
@@ -13,5 +18,14 @@ public class racket : MonoBehaviour
             Debug.Log("touched");
         }
     }
-    
+
+    private void Update()
+    {
+        Vector3 dist = player.position - transform.position;
+        if (dist.magnitude <= 5)
+        {
+            panel.SetActive(true);
+        }
+    }
+
 }

@@ -12,6 +12,9 @@ public class pickable_item : MonoBehaviour
     public float sensitivity = 2f;
     public GameObject me;
 
+    public GameObject panel;
+    public float panelRange;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,6 +54,11 @@ public class pickable_item : MonoBehaviour
             //rb.AddForce(0,0,1000);
             rb.AddForce(me.transform.forward*1000);
             
+        }
+
+        if (distanceToPlayer.magnitude<=panelRange)
+        {
+            panel.SetActive(true);
         }
     }
 

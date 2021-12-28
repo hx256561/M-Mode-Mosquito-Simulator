@@ -13,6 +13,7 @@ public class playerController2 : MonoBehaviour
 
     private bool isEquip=false;
     private Collision collision_0;
+    private Quaternion rot;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +28,13 @@ public class playerController2 : MonoBehaviour
         turn.y += Input.GetAxis("Mouse Y") * sensitivity;
 
         mover.transform.localRotation = Quaternion.Euler(-turn.y, turn.x, 0);
+        
 
         if (Input.GetAxis("Horizontal")!=0 || Input.GetAxis("Vertical")!=0 || Input.GetAxis("Jump")!=0)
         {
             deltaMove = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Jump") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime);
-            //rb.velocity = new Vector3(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Jump") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime);
             mover.transform.Translate(deltaMove);
+            
         }
         else
         {

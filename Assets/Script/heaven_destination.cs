@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class heaven_destination : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public float pickUpRange;
+    public Transform player;
+
+    private void Update()
     {
-        if (collision.gameObject.name == "player")
+        Vector3 distanceToPlayer = player.position - transform.position;
+        if (distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("touched 2");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
-            
+            Debug.Log("win");
         }
     }
 }

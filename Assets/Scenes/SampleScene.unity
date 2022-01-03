@@ -10539,7 +10539,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1644034969}
-  player: {fileID: 0}
+  player: {fileID: 806394632}
   pickUpRange: 8
   turn: {x: 0, y: 0}
   sensitivity: 2

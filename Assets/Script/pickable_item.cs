@@ -51,7 +51,6 @@ public class pickable_item : MonoBehaviour
             rb.isKinematic = false;
             transform.SetParent(null);
             rb.useGravity = true;
-            //rb.AddForce(0,0,1000);
             rb.AddForce(me.transform.forward*1000);
             
         }

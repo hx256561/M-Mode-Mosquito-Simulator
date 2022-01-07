@@ -9,7 +9,10 @@ public class chicken : MonoBehaviour
     public GameObject panel1;
     public GameObject panel2;
     public GameObject panel3;
+    public GameObject panel4;
+    public GameObject panel5;
     public Transform player;
+    public Transform grass;
     private bool pShow = true;
     private int story = 0;
 
@@ -23,6 +26,7 @@ public class chicken : MonoBehaviour
     void Update()
     {
         Vector3 dist = player.position - transform.position;
+        Vector3 gDist = grass.position - transform.position;
         if (dist.magnitude <= 5 && pShow)
         {
             panel0.SetActive(true);
@@ -49,6 +53,11 @@ public class chicken : MonoBehaviour
                     panel2.SetActive(false);
                     panel3.SetActive(true);
                     break;
+                case 4:
+                    panel3.SetActive(false);
+                    panel4.SetActive(true);
+                    break;
+
             }
         }
 
@@ -57,13 +66,11 @@ public class chicken : MonoBehaviour
             story += 1;
         }
 
-        
-
-        /*
-        if (dist.magnitude > 5)
+        if (gDist.magnitude <= 6)
         {
-            pShow = true;
+            panel5.SetActive(true);
         }
-        */
+
+
     }
 }

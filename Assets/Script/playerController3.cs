@@ -7,6 +7,7 @@ public class playerController3 : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
+
     // Start is called before the first frame update
     private void Start()
     {
@@ -33,9 +34,6 @@ public class playerController3 : MonoBehaviour
 
             controller.Move(move * speed * Time.deltaTime);
         }
-        /*
-        move = transform.right * x + transform.forward * z;
 
-        controller.Move(move*speed*Time.deltaTime);*/
     }
 }

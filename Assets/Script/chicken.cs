@@ -11,10 +11,12 @@ public class chicken : MonoBehaviour
     public GameObject panel3;
     public GameObject panel4;
     public GameObject panel5;
+
     public Transform player;
     public Transform grass;
     private bool pShow = true;
     private int story = 0;
+    private int grassNum = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +37,11 @@ public class chicken : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Return) && dist.magnitude <= 5)
         {
             pShow = false;
+
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                story += 1;
+            }
 
             switch (story)
             {
@@ -61,14 +68,14 @@ public class chicken : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            story += 1;
-        }
+        
 
-        if (gDist.magnitude <= 6)
+        
+
+        if (gDist.magnitude <= 6 && grassNum==0)
         {
             panel5.SetActive(true);
+            grassNum += 1;
         }
 
 

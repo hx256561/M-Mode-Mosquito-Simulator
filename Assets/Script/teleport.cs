@@ -29,11 +29,13 @@ public class teleport : MonoBehaviour
 
     }
 
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject==player)
         {
-            player.transform.position = new Vector3(28.9200001f, 96.4499969f, 22.7110004f);
+            player.transform.position = new Vector3(28.9200001f, 96.4499969f, 25.7110004f);
         }
         
     }

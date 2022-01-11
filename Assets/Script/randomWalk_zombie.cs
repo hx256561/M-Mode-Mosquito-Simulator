@@ -7,6 +7,8 @@ public class randomWalk_zombie : MonoBehaviour
     public float movementSpeed = 20f;
     public float rotationSpeed = 100f;
 
+    public Transform player;
+
     private bool isWandering = false;
     private bool isRotatingLeft = false;
     private bool isRotatingright = false;
@@ -22,6 +24,7 @@ public class randomWalk_zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (isWandering==false)
         {
             StartCoroutine(Wander());
@@ -39,6 +42,7 @@ public class randomWalk_zombie : MonoBehaviour
         {
             rb.AddForce(transform.forward * movementSpeed);
         }
+        
     }
 
     IEnumerator Wander()
@@ -76,4 +80,7 @@ public class randomWalk_zombie : MonoBehaviour
 
         isWandering = false;
     }
+
+
+
 }

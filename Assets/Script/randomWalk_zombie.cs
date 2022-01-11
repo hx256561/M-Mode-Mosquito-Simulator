@@ -14,7 +14,12 @@ public class randomWalk_zombie : MonoBehaviour
     private bool isRotatingright = false;
     private bool isWalking = false;
 
+    private int hp = 3;
+
     Rigidbody rb;
+    public Animator anim;
+    private bool dead = false;
+    public GameObject edge;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,24 +30,40 @@ public class randomWalk_zombie : MonoBehaviour
     void Update()
     {
 
-        if (isWandering==false)
+        if (isWandering==false && dead!=true)
         {
             StartCoroutine(Wander());
         }
-        if (isRotatingright==true)
+        if (isRotatingright==true && dead != true)
         {
             transform.Rotate(transform.up*Time.deltaTime*rotationSpeed);
         }
-        if (isRotatingLeft == true)
+        if (isRotatingLeft == true && dead != true)
         {
             transform.Rotate(transform.up * Time.deltaTime * -rotationSpeed);
         }
 
-        if (isWalking==true)
+        if (isWalking==true && dead != true)
         {
             rb.AddForce(transform.forward * movementSpeed);
+            anim.SetBool("run", true);
         }
-        
+        else
+        {
+            anim.SetBool("run", false);
+        }
+
+        if (hp<=0)
+        {
+            //this.gameObject.SetActive(false);
+            anim.SetBool("die", true);
+            dead = true;
+        }
+
+        if (this.gameObject.CompareTag("target") && hp<=0)
+        {
+            edge.SetActive(false);
+        }
     }
 
     IEnumerator Wander()
@@ -81,6 +102,13 @@ public class randomWalk_zombie : MonoBehaviour
         isWandering = false;
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("pickable"))
+        {
+            hp -= 1;
+        }
+    }
 
 
 }

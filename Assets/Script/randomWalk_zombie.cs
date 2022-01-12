@@ -20,6 +20,8 @@ public class randomWalk_zombie : MonoBehaviour
     public Animator anim;
     private bool dead = false;
     public GameObject edge;
+    public GameObject panel;
+    [SerializeField] AudioSource hurt;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +65,7 @@ public class randomWalk_zombie : MonoBehaviour
         if (this.gameObject.CompareTag("target") && hp<=0)
         {
             edge.SetActive(false);
+            panel.SetActive(true);
         }
     }
 
@@ -107,6 +110,7 @@ public class randomWalk_zombie : MonoBehaviour
         if (collision.gameObject.CompareTag("pickable"))
         {
             hp -= 1;
+            hurt.Play();
         }
     }
 

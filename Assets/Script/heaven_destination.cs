@@ -14,6 +14,7 @@ public class heaven_destination : MonoBehaviour
         if (distanceToPlayer.magnitude <= pickUpRange && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("win");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
     }
 }
